@@ -1,17 +1,16 @@
-n = int(input())
+'''Программа добавления и поиска телефонных номер'''
+n = int(input())# вводим количество номеров которые хотите добавить
 phoneDict = {}
 for i in range(n):
-  print(i)
-  stroka = input()
+  stroka = input("Введите номер и имя человека: ")# Вводим номер и имя человека, например "88005553535 Саня"
   list1 = stroka.split()
-  print(list1)
-  name = list1[-1].lower()
-  phone = list1[0]
+  name = list1[-1].lower()# присваиваем переменной имя человека
+  phone = list1[0]# присваимаем переменной номер телефона
   if name not in phoneDict:
-    phoneDict[name] == phone
+    phoneDict[name] == phone# добавляем в справочник человека и номер если такого нет
   else:
-    phoneDict.setdefault(name, []).append(phone)
-m = int(input())
+    phoneDict.setdefault(name, []).append(phone)# если у человека несколько номеров добавляем в конец новый номер
+m = int(input())# вводим имя человека чей номер надо найти
 for i in range(m):
   s = input().lower()
-  print(phoneDict.get(s, "абонент не найден"))
+  print(phoneDict.get(s, "абонент не найден"))# выводим номер, если есть в справочник, иначе выводим "абонент не найден"
