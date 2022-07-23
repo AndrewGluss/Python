@@ -1,3 +1,4 @@
+'''Написать функцию generate_passwords(n,m), где n - количество генерированных паролей, m = длина паролей'''
 import random
 import string
 def generate_password(length):
