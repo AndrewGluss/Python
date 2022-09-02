@@ -17,3 +17,4 @@ def narcissistic(value):
     if summ == value:
         return True
     return False
+    # return value == sum(int(x) ** len(str(value)) for x in str(value))
