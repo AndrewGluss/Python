@@ -49,7 +49,8 @@ for i in range(t):
         if good_period(period): # если промежуток времени правильный, увеличиваем счетчик на единицу
             count += 1
         list_period[j] = period
-    if count == n and not_cross(list_period):  # если счетчик равен количеству промежутков и пересечений нет
+
+    if count == n and not_cross(sorted(list_period, key = lambda x: x[0])):  # если счетчик равен количеству промежутков и пересечений нет
         print("YES")
     else:
         print("NO")
