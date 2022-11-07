@@ -1,3 +1,4 @@
+'''Пример реализации и использовании функции reduce()'''
 def reduce(operation, items, initial_value):
     acc = initial_value
     for item in items:
